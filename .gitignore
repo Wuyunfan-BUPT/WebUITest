@@ -1,0 +1,7 @@
+# DriverType
+driverType/
+.pytest*
+logs/
+report/
+report_email/
+
