@@ -48,12 +48,14 @@ class TestHomePage:
                          attribute, resultMessage, get_homePage):
         """点击 [认识广发] 按钮"""
         logger.info("test_knowGuangfa case: %s" % testName)
-        message = get_homePage.click_knowGuangfa(handleBy, handleLocator, by, locator, jumpPage, resultBy, resultLocator)
+        message = get_homePage.click_knowGuangfa(handleBy, handleLocator, by, locator, jumpPage, resultBy,
+                                                 resultLocator)
         try:
             assert message == resultMessage
             logger.info("PASS!")
         except AssertionError as ae:
-            logger.error("Fail! test_homePage_menu->test_knowGuangfa: %s ====> %s != %s" % testName % message % resultMessage)
+            logger.error(
+                "Fail! test_homePage_menu->test_knowGuangfa: %s ====> %s != %s" % testName % message % resultMessage)
 
     @pytest.mark.parametrize(
         "testName, handleBy, handleLocator, by, locator, resultBy, resultLocator, resultMessage",
@@ -67,7 +69,8 @@ class TestHomePage:
             assert message == resultMessage
             logger.info("PASS!")
         except AssertionError as ae:
-            logger.error("Fail! test_homePage_menu->test_peopleInGuangfa: %s ====> %s != %s" % testName % message % resultMessage)
+            logger.error(
+                "Fail! test_homePage_menu->test_peopleInGuangfa: %s ====> %s != %s" % testName % message % resultMessage)
 
 
 if __name__ == '__main__':

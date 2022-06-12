@@ -7,12 +7,16 @@
 # @Software: PyCharm
 import openpyxl
 from config.conf import EXCEL_DIR
+from utils.parseConfFile import ParseConfFile
+
+do_conf = ParseConfFile()
+dataName = do_conf.get_value('BaseSetting', 'dataName')
 
 class ExcelUtil:
 
 
     def read_excel(self, tableName):
-        wb = openpyxl.load_workbook(f"{EXCEL_DIR}/login_data.xlsx")
+        wb = openpyxl.load_workbook(f"{EXCEL_DIR}/{dataName}")
         sheet = wb[tableName]
 
         all_items = []

@@ -99,6 +99,19 @@ class LoginPage(BasePage):
         self.click(*self.agree)
         message_true = self.find_element(*self.bottomSubmit).is_enabled()
         return message_false, message_true
+    '''
+    def emailBox_clipboard(self, text):
+        """粘贴剪切板内容"""
+        ClipBoard.set_text(text)
+        if text is not None:
+            self.send_keys(*self.emailAddressBox, ClipBoard.get_text())
+        else:
+            self.clear_emailAddressBox()
+        message =
+
+    '''
+
+
 
     def input_emailAddress(self, email):
         """在邮件地址框输入邮件信息"""

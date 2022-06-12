@@ -72,6 +72,12 @@ class TestLoginPage:
         assert (not message_false) and message_true
 
     '''
+    def test_emailBox_clipboard(self, get_loginPage):
+        """测试 [邮件地址框] 剪切板"""
+        logger.info("test_emailBox_clipboard case: {}".format("邮件地址框剪切板"))
+
+    '''
+    '''
     def test_login_success(self, get_loginPage):
         """测试 [登录成功] 情形"""
         # get_loginPage.click(*self.login)

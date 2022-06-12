@@ -22,8 +22,8 @@ class HomePage(BasePage):
         if jumpPage == 'Y':
             self.close()
             self.driver.switch_to.window(handles[0])
-        elif handleBy != 'None':
-            self.back()
+        #elif handleBy != 'None':
+        #    self.back()
         return message
 
     def click_peopleInGuangfa(self, handleBy, handleLocator, by, locator, resultBy, resultLocator):
@@ -32,8 +32,8 @@ class HomePage(BasePage):
         if self.is_click(by, locator) is not None:
             self.click(by, locator)
         message = self.get_element_text(resultBy, resultLocator)
-        if handleBy != 'None':
-            self.back()
+        # if handleBy != 'None':
+        #    self.back()
         return message
 
     def click_homePage_menu(self,  by, locator, resultBy, resultLocator, isBack):
