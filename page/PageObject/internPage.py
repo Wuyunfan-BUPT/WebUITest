@@ -31,8 +31,6 @@ class InternPage(BasePage):
         self.send_keys(*self.searchBox, inputText)
         KeyBoard.key_down('enter')
         KeyBoard.key_down('enter')
-
-
         self.sleep(2)
         message = self.get_element_text(resultBy, resultLocator)
         return message
